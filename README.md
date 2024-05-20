@@ -70,16 +70,65 @@ In the implementation, multiple ambulances are allowed to pass the intersection 
 
 ## Implementation
 
-The implementation consists of the following classes: `IntersectionSolver`, `Intersection` and `Vehicle`.
+The implementation consists of three classes: `IntersectionSolver`, `Intersection` and `Vehicle`. The following UML diagram provides an overview of the classes and enums.
+
+![UML class diagram](uml_classes.png)
 
 ### IntersectionSolver
-Implements the process of determining the order of the passing vehicles, contains the main function.
+Implements the process of determining the order of the vehicles.
+
+#### main
+
+This is the entrypoint of the application. After processing the input parameters, the ambulances and cars are processed separately.
+
+#### createVehiclesFromInput
+
+Creates the list of vehicles from the command line arguments and returns it.
+
+#### filterByVehicleType
+
+Filters the given list of vehicles by the given vehicle type and returns the filtered list.
+
+#### processCar
+
+Decides whether the car received as a parameter can cross the intersection based on its target direction and the other cars in the intersection.
+
+#### printVehicleChar
+
+Prints a vehicle's character, the first letter of the source direction to the standard output.
 
 ### Intersection
 
-Represents the intersection, provides functions to check and maintain the status of the directions.
+Represents the intersection, provides functions to check and update its status.
+
+#### Constructor
+
+Receives the list of vehicles and stores the vehicles.
+
+#### getVehicleComingFromRight
+
+Receives a source direction and from the POV of the vehicle arriving from this direction, returns the vehicle coming from the right.
+
+#### getVehicleComingOpposite
+
+Receives a source direction and from the POV of the vehicle arriving from this direction, returns the vehicle coming from the opposite direction.
+
+#### removeVehicle
+
+Removes a vehicle from the intersection.
 
 ### Vehicle
 
 Represents a vehicle (a car or an ambulance).
 
+#### Constructor
+
+Receives and stores a vehicle's data.
+
+#### getTypeFromString
+
+Returns a vehicle type based on the vehicle's input string.
+
+#### getTargetDirectionFromString
+
+Returns a target direction based on the vehicle's input string.
