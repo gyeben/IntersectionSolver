@@ -58,7 +58,7 @@ As the traffic rules were not provided in the exercise description, I checked th
 - A car must give right of way to other cars coming from its right.
 - A left-turning car must give right of way to a car coming from the opposite direction if the other car is going straight or turning right.
 
-The combination of the second and the third rule means that a car turning right can cross at any time (if there is no ambulance coming).
+From the second and the third rules it can be derived that a car turning right can cross at any time (if there is no ambulance coming).
 
 Some cases are not specified in the traffic code. These are the following:
 
@@ -95,7 +95,7 @@ Decides whether the car received as a parameter can cross the intersection based
 
 #### printVehicleChar
 
-Prints a vehicle's character, the first letter of the source direction to the standard output.
+Prints a vehicle's character, the first letter of its source direction to the standard output.
 
 ### Intersection
 
@@ -111,7 +111,7 @@ Receives a source direction and from the POV of the vehicle arriving from this d
 
 #### getVehicleComingOpposite
 
-Receives a source direction and from the POV of the vehicle arriving from this direction, returns the vehicle coming from the opposite direction.
+Receives a source direction and from the POV of the v   ehicle arriving from this direction, returns the vehicle coming from the opposite direction.
 
 #### removeVehicle
 
