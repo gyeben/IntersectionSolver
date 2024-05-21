@@ -111,7 +111,7 @@ Receives a source direction and from the POV of the vehicle arriving from this d
 
 #### getVehicleComingOpposite
 
-Receives a source direction and from the POV of the v   ehicle arriving from this direction, returns the vehicle coming from the opposite direction.
+Receives a source direction and from the POV of the vehicle arriving from this direction, returns the vehicle coming from the opposite direction.
 
 #### removeVehicle
 
